@@ -7,14 +7,14 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>Presentation</title>
+    <title>Opulentia Presentation</title>
     <meta
       name="description"
-      content="Beautiful presentations using unified template"
+      content="Professional presentations using Opulentia template"
     />
-    <meta name="author" content="Presentation Template" />
+    <meta name="author" content="Opulentia" />
 
-    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
     <link rel="stylesheet" href="dist/theme/opulentia.css" id="theme" />
 
@@ -35,17 +35,6 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- PDF export settings -->
-    <script>
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.type = "text/css";
-      link.href = window.location.search.match(/print-pdf/gi)
-        ? "css/print/pdf.css"
-        : "css/print/paper.css";
-      document.getElementsByTagName("head")[0].appendChild(link);
-    </script>
   </head>
   <body>
     <div class="reveal">
@@ -168,7 +157,7 @@
         <!-- Sidebar Image Slide -->
         <section
           id="sidebar-image"
-          data-background-image="https://images.unsplash.com/photo-xxx?w=1280&h=720&fit=crop"
+          data-background-image="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1280&h=720&fit=crop"
         >
           <div class="sidebar-content">
             <h1>Title with Image</h1>
@@ -184,14 +173,14 @@
           <div class="chart-container">
             <canvas data-chart="line">
               <!--
-						{
-						 "data": {
-						  "labels": ["Q1","Q2","Q3","Q4"],
-						  "datasets":[{"data":[65,59,80,81],"label":"Series A","backgroundColor":"rgba(99,91,255,0.2)","borderColor":"#635BFF"}]
-						 },
-						 "options": {"responsive": true}
-						}
-						-->
+{
+ "data": {
+  "labels": ["Q1","Q2","Q3","Q4"],
+  "datasets":[{"data":[65,59,80,81],"label":"Series A","backgroundColor":"rgba(99,91,255,0.2)","borderColor":"#635BFF"}]
+ },
+ "options": {"responsive": true}
+}
+-->
             </canvas>
           </div>
         </section>
@@ -206,7 +195,7 @@ function example() {
   console.log(message);
   return message;
 }
-					</code></pre>
+          </code></pre>
         </section>
 
         <!-- End Slide -->
@@ -231,23 +220,23 @@ function example() {
       <button class="nav-btn" onclick="Reveal.slide(Reveal.getIndices().h + 1)">
         <i class="fas fa-chevron-right"></i>
       </button>
-      <span class="slide-counter"
-        ><span id="currentSlide">1</span> /
-        <span id="totalSlides">X</span></span
-      >
+      <span class="slide-counter">
+        <span id="currentSlide">1</span> / <span id="totalSlides">X</span>
+      </span>
     </div>
 
-    <script type="module">
-      import Reveal from "dist/reveal.esm.js";
-      import RevealMarkdown from "plugin/markdown/markdown.esm.js";
-      import RevealHighlight from "plugin/highlight/highlight.esm.js";
-      import RevealNotes from "plugin/notes/notes.esm.js";
-      import RevealMath from "plugin/math/math.esm.js";
-      import RevealSearch from "plugin/search/search.esm.js";
-      import RevealZoom from "plugin/zoom/zoom.esm.js";
+    <!-- Load Reveal.js -->
+    <script src="dist/reveal.js"></script>
 
-      window.Reveal = Reveal;
+    <!-- Load Plugins -->
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
 
+    <script>
       Reveal.initialize({
         hash: true,
         controls: true,
@@ -289,7 +278,7 @@ function example() {
           RevealMath,
           RevealSearch,
           RevealZoom,
-          window.RevealChart,
+          RevealChart,
         ],
       });
 
@@ -297,7 +286,7 @@ function example() {
       const totalSlides = document.querySelectorAll(".slides > section").length;
       document.getElementById("totalSlides").textContent = totalSlides;
 
-      Reveal.on("slidechanged", (event) => {
+      Reveal.on("slidechanged", function (event) {
         document.getElementById("currentSlide").textContent = event.indexh + 1;
       });
     </script>
