@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@font-face {
+  font-family: 'Open Runde Sans';
+  src: url('../fonts/openrunde/OpenRunde-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Runde Sans';
+  src: url('../fonts/openrunde/OpenRunde-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Runde Sans';
+  src: url('../fonts/openrunde/OpenRunde-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Runde Sans';
+  src: url('../fonts/openrunde/OpenRunde-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin slashpresent-theme(
+  $background,
+  $surface,
+  $surfaceStrong,
+  $paper,
+  $paperSoft,
+  $foreground,
+  $muted,
+  $border,
+  $accent,
+  $accentSoft,
+  $secondary,
+  $shadow,
+  $paperBackground,
+  $paperForeground,
+  $backgroundMode: dark
+) {
+  @if $backgroundMode == light {
+    @include light-bg-text-color($foreground);
+  } @else {
+    @include dark-bg-text-color($foreground);
+  }
+
+  .reveal {
+    font-feature-settings: "liga", "kern";
+    text-rendering: optimizeLegibility;
+
+    &:before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+      background-size: 72px 72px;
+      opacity: 0.28;
+    }
+
+    .slides section {
+      text-align: left;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-wrap: balance;
+      line-height: 0.94;
+    }
+
+    p,
+    li {
+      text-wrap: pretty;
+    }
+
+    h1 {
+      margin-bottom: 0.24em;
+    }
+
+    h2 {
+      margin-bottom: 0.3em;
+    }
+
+    p,
+    li {
+      color: $paper;
+      line-height: 1.42;
+    }
+
+    strong {
+      color: $foreground;
+    }
+
+    small,
+    .muted {
+      color: $muted;
+    }
+
+    code {
+      color: $paper;
+      background: rgba($paper, 0.06);
+      border: 1px solid rgba($paper, 0.08);
+      border-radius: 0.45rem;
+      padding: 0.14em 0.34em;
+    }
+
+    pre {
+      box-shadow: none;
+      border: 1px solid rgba($paper, 0.09);
+      border-radius: 1rem;
+      background: rgba($surfaceStrong, 0.9);
+
+      code {
+        background: transparent;
+        border: 0;
+        border-radius: 1rem;
+        padding: 1.2em;
+      }
+    }
+
+    blockquote {
+      width: 100%;
+      margin: 0;
+      padding: 1.2rem 1.35rem;
+      border-left: 3px solid $accent;
+      background: rgba($surfaceStrong, 0.92);
+      border-radius: 1rem;
+      box-shadow: 0 18px 32px -28px $shadow;
+    }
+
+    table {
+      margin: 0;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border-color: rgba($paper, 0.12);
+    }
+
+    .progress {
+      height: 4px;
+      background: rgba($paper, 0.08);
+
+      span {
+        background: $accent;
+      }
+    }
+
+    .controls {
+      color: $accentSoft;
+    }
+
+    .slashpresent-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 1.1rem;
+      color: $accentSoft;
+      font-size: 0.5em;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 2.4rem;
+        height: 1px;
+        background: rgba($accentSoft, 0.6);
+      }
+    }
+
+    .slashpresent-shell {
+      padding: 1.35rem 1.5rem 1.45rem;
+      border: 1px solid $border;
+      border-radius: 1.4rem;
+      background: linear-gradient(
+        180deg,
+        rgba($surfaceStrong, 0.98) 0%,
+        rgba($surface, 0.96) 100%
+      );
+      box-shadow: 0 30px 60px -42px $shadow;
+    }
+
+    .slashpresent-shell.paper {
+      background: $paperBackground;
+      border-color: rgba($paperForeground, 0.12);
+      color: $paperForeground;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      li,
+      strong,
+      small,
+      .muted {
+        color: inherit;
+      }
+    }
+
+    .slashpresent-title {
+      max-width: 12ch;
+      margin-bottom: 0.45rem;
+    }
+
+    .slashpresent-lead {
+      max-width: 19ch;
+      font-size: 0.76em;
+      color: $paperSoft;
+    }
+
+    .slashpresent-chip-row,
+    .slashpresent-proof-band {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .slashpresent-chip,
+    .slashpresent-proof {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.48rem 0.72rem;
+      border: 1px solid rgba($paper, 0.1);
+      border-radius: 999px;
+      background: rgba($paper, 0.04);
+      font-size: 0.42em;
+      color: $paperSoft;
+    }
+
+    .slashpresent-chip strong,
+    .slashpresent-proof strong {
+      color: $foreground;
+      font-weight: 600;
+    }
+
+    .slashpresent-grid-2,
+    .slashpresent-grid-3,
+    .slashpresent-stat-row {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .slashpresent-grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .slashpresent-grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .slashpresent-stat-row {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .slashpresent-card,
+    .slashpresent-stat-card {
+      padding: 1.05rem 1rem;
+      border: 1px solid rgba($paper, 0.1);
+      border-radius: 1.15rem;
+      background: rgba($paper, 0.035);
+    }
+
+    .slashpresent-card h3,
+    .slashpresent-stat-card h3 {
+      font-family: $headingFont;
+      font-size: 0.78em;
+      margin-bottom: 0.36rem;
+    }
+
+    .slashpresent-card p,
+    .slashpresent-stat-card p {
+      font-size: 0.46em;
+      color: $paperSoft;
+    }
+
+    .slashpresent-stat-value {
+      display: block;
+      margin-bottom: 0.2rem;
+      font-family: $headingFont;
+      font-size: 1.1em;
+      color: $foreground;
+      line-height: 0.95;
+    }
+
+    .slashpresent-stat-label {
+      display: block;
+      font-size: 0.34em;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: $muted;
+    }
+
+    .slashpresent-split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 1.2rem;
+      align-items: stretch;
+    }
+
+    .slashpresent-matrix {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.95rem;
+    }
+
+    .slashpresent-quadrant {
+      min-height: 8rem;
+      padding: 1rem;
+      border: 1px solid rgba($paper, 0.09);
+      border-radius: 1.1rem;
+      background: rgba($paper, 0.04);
+    }
+
+    .slashpresent-quadrant h4 {
+      margin-bottom: 0.4rem;
+      font-size: 0.62em;
+    }
+
+    .slashpresent-quadrant p,
+    .slashpresent-quadrant li {
+      font-size: 0.4em;
+      color: $paperSoft;
+    }
+
+    .slashpresent-quadrant ul {
+      margin: 0.35rem 0 0 1.05rem;
+    }
+
+    .slashpresent-comparison {
+      width: 100%;
+      border: 1px solid rgba($paper, 0.09);
+      border-radius: 1.2rem;
+      overflow: hidden;
+      background: rgba($paper, 0.03);
+    }
+
+    .slashpresent-comparison th,
+    .slashpresent-comparison td {
+      padding: 0.72rem 0.9rem;
+      font-size: 0.4em;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .slashpresent-comparison thead th {
+      color: $foreground;
+      background: rgba($paper, 0.06);
+      font-size: 0.34em;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .slashpresent-comparison tbody tr:nth-child(even) td {
+      background: rgba($paper, 0.02);
+    }
+
+    .slashpresent-comparison td:first-child,
+    .slashpresent-comparison th:first-child {
+      width: 22%;
+      color: $paperSoft;
+      font-weight: 600;
+    }
+
+    .slashpresent-timeline {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .slashpresent-step {
+      display: grid;
+      grid-template-columns: 3.8rem minmax(0, 1fr);
+      gap: 0.9rem;
+      align-items: start;
+    }
+
+    .slashpresent-step-phase {
+      padding-top: 0.12rem;
+      color: $accentSoft;
+      font-size: 0.34em;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .slashpresent-step-body {
+      padding-left: 0.9rem;
+      border-left: 1px solid rgba($paper, 0.16);
+    }
+
+    .slashpresent-step-body h4 {
+      margin-bottom: 0.28rem;
+      font-size: 0.62em;
+    }
+
+    .slashpresent-step-body p {
+      font-size: 0.4em;
+      color: $paperSoft;
+    }
+
+    .slashpresent-quote {
+      padding: 1.3rem 1.45rem;
+      border: 1px solid rgba($paper, 0.1);
+      border-radius: 1.35rem;
+      background: rgba($paper, 0.04);
+    }
+
+    .slashpresent-quote-copy {
+      font-family: $headingFont;
+      font-size: 0.92em;
+      line-height: 1.12;
+      color: $foreground;
+    }
+
+    .slashpresent-quote-attribution {
+      margin-top: 0.8rem;
+      font-size: 0.38em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $muted;
+    }
+
+    .slashpresent-swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.95rem;
+    }
+
+    .slashpresent-swatch {
+      border-radius: 1.15rem;
+      overflow: hidden;
+      border: 1px solid rgba($paper, 0.1);
+      background: rgba($paper, 0.05);
+    }
+
+    .slashpresent-swatch-band {
+      height: 5.4rem;
+    }
+
+    .slashpresent-swatch-body {
+      padding: 0.75rem 0.8rem 0.85rem;
+    }
+
+    .slashpresent-swatch-body h4 {
+      margin-bottom: 0.22rem;
+      font-size: 0.56em;
+    }
+
+    .slashpresent-swatch-body p {
+      font-size: 0.36em;
+      color: $paperSoft;
+    }
+
+    .slashpresent-list {
+      margin: 0.4rem 0 0 1.15rem;
+    }
+
+    .slashpresent-list li {
+      margin-bottom: 0.38rem;
+      font-size: 0.44em;
+      color: $paperSoft;
+    }
+
+    .slashpresent-divider {
+      width: 100%;
+      height: 1px;
+      margin: 1rem 0;
+      background: rgba($paper, 0.1);
+    }
+
+    .slashpresent-accent {
+      color: $accentSoft;
+    }
+
+    .slashpresent-secondary {
+      color: $secondary;
+    }
+
+    .slashpresent-center {
+      text-align: center;
+    }
+  }
+}

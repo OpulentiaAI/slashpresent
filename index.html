@@ -1,276 +1,364 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    >
 
-    <title>Opulentia Presentation</title>
+    <title>Slashpresent Improvement Roadmap</title>
     <meta
       name="description"
-      content="Professional presentations using Opulentia template"
-    />
-    <meta name="author" content="Opulentia" />
+      content="A premium Reveal.js presentation showcasing Slashpresent's upgraded visual system and reusable slide components."
+    >
+    <meta name="author" content="Opulentia AI">
 
-    <link rel="stylesheet" href="dist/reset.css" />
-    <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/opulentia.css" id="theme" />
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/slashpresent.css" id="theme">
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
-
-    <!-- Chart plugin -->
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chart/plugin.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
-
-    <!-- Font Awesome -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <script>
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.head.appendChild(link);
+    </script>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-        <!-- Title Slide -->
-        <section id="title">
-          <p class="pre-title">Section Pre-Title</p>
-          <h1 class="gradient-text">Presentation Title</h1>
-          <h3>Subtitle or Tagline</h3>
-          <div class="accent-bar"></div>
-          <p class="tagline">Brief description or tagline</p>
-          <div class="meta-info">
-            <div class="meta-item">
-              <span class="meta-label">Label 1</span>
-              <span class="meta-value">Value 1</span>
-            </div>
-            <div class="vertical-divider"></div>
-            <div class="meta-item">
-              <span class="meta-label">Label 2</span>
-              <span class="meta-value">Value 2</span>
-            </div>
+        <section>
+          <div class="slashpresent-kicker">March 2026 roadmap</div>
+          <h1 class="slashpresent-title">Slashpresent Improvement Roadmap</h1>
+          <p class="slashpresent-lead">
+            Enhancing agentic slide development with a stronger visual system,
+            reusable consulting-grade components, and a more intentional default
+            deck surface.
+          </p>
+          <div class="slashpresent-divider"></div>
+          <div class="slashpresent-chip-row">
+            <span class="slashpresent-chip"><strong>Core engine</strong> presentation-first substrate</span>
+            <span class="slashpresent-chip"><strong>Focus</strong> aesthetics and components</span>
+            <span class="slashpresent-chip"><strong>Excludes</strong> runtime architecture changes</span>
           </div>
-          <aside class="notes">
-            Speaker notes for the title slide. Add your talking points here.
-          </aside>
         </section>
 
-        <!-- Content Slide with Stats -->
-        <section id="content-stats">
-          <p class="section-label">Section</p>
-          <h1>Slide Title</h1>
-          <div class="accent-bar"></div>
-          <div class="content-grid">
-            <div class="content-text">
-              <p class="lead">
-                Main description with <span class="highlight">emphasis</span>.
-              </p>
-              <p>Secondary supporting description goes here.</p>
-            </div>
-            <div class="stats-grid">
-              <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-globe"></i></div>
-                <p class="stat-label">Feature Name</p>
-                <p class="stat-value">Value</p>
+        <section>
+          <div class="slashpresent-kicker">Executive summary</div>
+          <div class="slashpresent-shell">
+            <h2>What changes the product fastest</h2>
+            <p class="slashpresent-lead">
+              Slashpresent already has the right substrate. The fastest route to
+              a materially better product is to upgrade the default theme, add a
+              serious component language, and make the shipped deck feel authored
+              instead of template-generated.
+            </p>
+            <div class="slashpresent-stat-row" style="margin-top: 1.25rem;">
+              <div class="slashpresent-stat-card">
+                <span class="slashpresent-stat-value">4</span>
+                <span class="slashpresent-stat-label">priority phases</span>
               </div>
-              <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
-                <p class="stat-label">Metric</p>
-                <p class="stat-value">+40%</p>
+              <div class="slashpresent-stat-card">
+                <span class="slashpresent-stat-value">10+</span>
+                <span class="slashpresent-stat-label">new visual primitives</span>
+              </div>
+              <div class="slashpresent-stat-card">
+                <span class="slashpresent-stat-value">1</span>
+                <span class="slashpresent-stat-label">clear aesthetic direction</span>
+              </div>
+              <div class="slashpresent-stat-card">
+                <span class="slashpresent-stat-value">0</span>
+                <span class="slashpresent-stat-label">AI-slop defaults</span>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Gradient Feature Slide -->
-        <section
-          id="gradient-features"
-          data-background-gradient="linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%)"
-        >
-          <h1 class="white">Title</h1>
-          <div class="accent-bar-light"></div>
-          <div class="features-grid">
-            <div class="glass-card">
-              <div class="glass-icon"><i class="fas fa-rocket"></i></div>
-              <h3>Feature Name</h3>
-              <p>Description</p>
+        <section>
+          <div class="slashpresent-kicker">Current state</div>
+          <div class="slashpresent-split">
+            <div class="slashpresent-shell">
+              <h2>What already works</h2>
+              <ul class="slashpresent-list">
+                <li>Reveal.js gives you navigation, notes, transitions, and export-friendly structure.</li>
+                <li>The repo already supports a themed presentation workflow instead of raw HTML chaos.</li>
+                <li>The architecture is lightweight enough to stay editable and transparent.</li>
+                <li>A curated default deck can become the product's design reference instead of documentation drift.</li>
+              </ul>
             </div>
-            <div class="glass-card">
-              <div class="glass-icon"><i class="fas fa-shield-alt"></i></div>
-              <h3>Feature Name</h3>
-              <p>Description</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Process Flow Slide -->
-        <section id="process-flow">
-          <h1>Process Flow</h1>
-          <div class="accent-bar"></div>
-          <div class="process-steps">
-            <div class="process-step active">
-              <div class="step-number">1</div>
-              <p>Step One</p>
-            </div>
-            <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-            <div class="process-step">
-              <div class="step-number">2</div>
-              <p>Step Two</p>
-            </div>
-            <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
-            <div class="process-step">
-              <div class="step-number">3</div>
-              <p>Result</p>
+            <div class="slashpresent-shell">
+              <h2>What holds it back</h2>
+              <ul class="slashpresent-list">
+                <li>The inherited default branding makes the repo feel generic instead of product-owned.</li>
+                <li>The component vocabulary is too thin for consulting, strategy, or roadmap work.</li>
+                <li>The default deck demonstrates mechanics, not Slashpresent taste.</li>
+                <li>There is no premium visual baseline for agents to imitate slide after slide.</li>
+              </ul>
             </div>
           </div>
         </section>
 
-        <!-- Ask/Point Card Slide -->
-        <section id="ask-card">
-          <h1>Key Points</h1>
-          <div class="accent-bar"></div>
-          <div class="ask-list">
-            <div class="ask-card">
-              <div class="ask-number">1</div>
-              <div class="ask-content">
-                <h3>Ask Title</h3>
-                <p>Description of the ask or point.</p>
+        <section>
+          <div class="slashpresent-kicker">Competitive lens</div>
+          <div class="slashpresent-shell">
+            <h2>Where Slashpresent should differentiate</h2>
+            <table class="slashpresent-comparison">
+              <thead>
+                <tr>
+                  <th>Dimension</th>
+                  <th>Current Slashpresent</th>
+                  <th>Best-in-class expectation</th>
+                  <th>Immediate repo response</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Default look</td>
+                  <td>Generic template styling</td>
+                    <td>Confident visual identity from slide one</td>
+                    <td>Ship a premium default theme and showcase deck</td>
+                </tr>
+                <tr>
+                  <td>Component range</td>
+                  <td>Basic cards and utility styles</td>
+                  <td>Purpose-built business layouts</td>
+                  <td>Add matrices, comparison tables, timelines, proof bands, quote blocks</td>
+                </tr>
+                <tr>
+                  <td>Narrative quality</td>
+                  <td>Structure is manual and inconsistent</td>
+                  <td>Slides reinforce storyline shape</td>
+                  <td>Embed narrative-ready sections into the starter deck</td>
+                </tr>
+                <tr>
+                  <td>Brand ownership</td>
+                  <td>Still reads as Scout</td>
+                  <td>Product identity is unmistakable</td>
+                  <td>Rebrand the main surface to Slashpresent</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <div class="slashpresent-kicker">Visual system</div>
+          <div class="slashpresent-shell">
+            <h2>A more intentional aesthetic baseline</h2>
+            <div class="slashpresent-grid-3" style="margin-top: 1rem;">
+              <div class="slashpresent-card">
+                <h3>Editorial typography</h3>
+                <p>Fraunces for hierarchy, Open Runde Sans for body, IBM Plex Mono for data and code.</p>
+              </div>
+              <div class="slashpresent-card">
+                <h3>Dark paper palette</h3>
+                <p>Graphite surfaces, warm paper text, copper highlight, and eucalyptus secondary accents.</p>
+              </div>
+              <div class="slashpresent-card">
+                <h3>Framed surfaces</h3>
+                <p>Every important layout lives inside a designed shell, not loose floating text.</p>
               </div>
             </div>
-            <div class="ask-card">
-              <div class="ask-number">2</div>
-              <div class="ask-content">
-                <h3>Second Point</h3>
-                <p>Additional information.</p>
+            <div class="slashpresent-proof-band" style="margin-top: 1rem;">
+              <span class="slashpresent-proof"><strong>Rule</strong> no purple-on-white defaults</span>
+              <span class="slashpresent-proof"><strong>Rule</strong> one accent per surface</span>
+              <span class="slashpresent-proof"><strong>Rule</strong> components first, inline styles last</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="slashpresent-kicker">Component library</div>
+          <div class="slashpresent-split">
+            <div class="slashpresent-shell">
+              <h2>Consulting-grade layout primitives</h2>
+              <div class="slashpresent-grid-2" style="margin-top: 1rem;">
+                <div class="slashpresent-card">
+                  <h3>Stat row</h3>
+                  <p>Dense KPI strips for executive summaries and proof slides.</p>
+                </div>
+                <div class="slashpresent-card">
+                  <h3>Proof band</h3>
+                  <p>Compact evidence tags for claims, metrics, and source-backed signals.</p>
+                </div>
+                <div class="slashpresent-card">
+                  <h3>Comparison table</h3>
+                  <p>Cleaner side-by-side framing for competitors, options, or requirements.</p>
+                </div>
+                <div class="slashpresent-card">
+                  <h3>Timeline</h3>
+                  <p>Readable sequencing for execution plans, migrations, and rollouts.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slashpresent-quote">
+              <div class="slashpresent-quote-copy">
+                "The goal is not more slide chrome. The goal is a default deck that
+                looks like it was built by someone with taste and a point of view."
+              </div>
+              <div class="slashpresent-quote-attribution">Slashpresent design principle</div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="slashpresent-kicker">Structured thinking</div>
+          <div class="slashpresent-shell">
+            <h2>New matrices make strategic slides easier to author</h2>
+            <div class="slashpresent-matrix" style="margin-top: 1rem;">
+              <div class="slashpresent-quadrant">
+                <h4>Foundation</h4>
+                <ul>
+                  <li>Slashpresent theme</li>
+                  <li>Shell, chip, card, proof primitives</li>
+                  <li>Default roadmap deck</li>
+                </ul>
+              </div>
+              <div class="slashpresent-quadrant">
+                <h4>Content systems</h4>
+                <ul>
+                  <li>Narrative templates</li>
+                  <li>Grounding-aware layouts</li>
+                  <li>Speaker note structure</li>
+                </ul>
+              </div>
+              <div class="slashpresent-quadrant">
+                <h4>Delivery</h4>
+                <ul>
+                  <li>PPTX export fidelity</li>
+                  <li>PDF polish</li>
+                  <li>Theme variants</li>
+                </ul>
+              </div>
+              <div class="slashpresent-quadrant">
+                <h4>Automation surface</h4>
+                <ul>
+                  <li>Template extraction</li>
+                  <li>Programmatic composition</li>
+                  <li>Agent workflow hooks</li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Sidebar Image Slide -->
-        <section
-          id="sidebar-image"
-          data-background-image="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1280&h=720&fit=crop"
-        >
-          <div class="sidebar-content">
-            <h1>Title with Image</h1>
-            <div class="accent-bar"></div>
-            <p>Content that appears alongside the background image.</p>
+        <section>
+          <div class="slashpresent-kicker">Theme variants</div>
+          <div class="slashpresent-shell">
+            <h2>One product, multiple credible moods</h2>
+            <div class="slashpresent-swatch-grid" style="margin-top: 1rem;">
+              <div class="slashpresent-swatch">
+                <div class="slashpresent-swatch-band" style="background: #171a1d;"></div>
+                <div class="slashpresent-swatch-body">
+                  <h4>Slashpresent</h4>
+                  <p>Editorial dark, warm paper text, copper accents.</p>
+                </div>
+              </div>
+              <div class="slashpresent-swatch">
+                <div class="slashpresent-swatch-band" style="background: #102235;"></div>
+                <div class="slashpresent-swatch-body">
+                  <h4>Executive</h4>
+                  <p>Navy base with restrained gold for board and finance narratives.</p>
+                </div>
+              </div>
+              <div class="slashpresent-swatch">
+                <div class="slashpresent-swatch-band" style="background: #efebe2;"></div>
+                <div class="slashpresent-swatch-body">
+                  <h4>Minimal</h4>
+                  <p>Paper-led layout for research, education, and quiet technical decks.</p>
+                </div>
+              </div>
+              <div class="slashpresent-swatch">
+                <div class="slashpresent-swatch-band" style="background: #213229;"></div>
+                <div class="slashpresent-swatch-body">
+                  <h4>Nature</h4>
+                  <p>Muted green and stone for sustainability and long-horizon systems work.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        <!-- Interactive Chart Slide -->
-        <section id="chart-slide">
-          <h1>Data Visualization</h1>
-          <div class="accent-bar"></div>
-          <div class="chart-container">
-            <canvas data-chart="line">
-              <!--
-{
- "data": {
-  "labels": ["Q1","Q2","Q3","Q4"],
-  "datasets":[{"data":[65,59,80,81],"label":"Series A","backgroundColor":"rgba(99,91,255,0.2)","borderColor":"#635BFF"}]
- },
- "options": {"responsive": true}
-}
--->
-            </canvas>
+        <section>
+          <div class="slashpresent-kicker">Execution roadmap</div>
+          <div class="slashpresent-shell">
+            <h2>Prioritized repo work</h2>
+            <div class="slashpresent-timeline" style="margin-top: 1rem;">
+              <div class="slashpresent-step">
+                <div class="slashpresent-step-phase">Phase 1</div>
+                <div class="slashpresent-step-body">
+                  <h4>Visual ownership</h4>
+                  <p>Rebrand the default deck, ship the new theme, and establish premium shells, cards, and typographic rules.</p>
+                </div>
+              </div>
+              <div class="slashpresent-step">
+                <div class="slashpresent-step-phase">Phase 2</div>
+                <div class="slashpresent-step-body">
+                  <h4>Component depth</h4>
+                  <p>Expand matrices, comparison modules, timelines, quote blocks, and dashboard rows until strategy decks feel first-class.</p>
+                </div>
+              </div>
+              <div class="slashpresent-step">
+                <div class="slashpresent-step-phase">Phase 3</div>
+                <div class="slashpresent-step-body">
+                  <h4>Template intelligence</h4>
+                  <p>Focus on import/export and template extraction workflows, not generic AI generation surfaces.</p>
+                </div>
+              </div>
+              <div class="slashpresent-step">
+                <div class="slashpresent-step-phase">Phase 4</div>
+                <div class="slashpresent-step-body">
+                  <h4>Variant system</h4>
+                  <p>Add credible theme families and richer component combinations so agents can compose distinct decks without aesthetic drift.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        <!-- Code Highlight Slide -->
-        <section id="code-slide">
-          <h1>Code Example</h1>
-          <div class="accent-bar"></div>
-          <pre><code class="hljs javascript" data-trim data-line-numbers>
-function example() {
-  const message = 'Hello World';
-  console.log(message);
-  return message;
-}
-          </code></pre>
-        </section>
-
-        <!-- End Slide -->
-        <section id="end">
-          <h1 class="gradient-text">Thank You</h1>
-          <div class="accent-bar"></div>
-          <p>Questions & Discussion</p>
-          <div class="contact-info">
-            <p><i class="fas fa-envelope"></i> email@example.com</p>
-            <p><i class="fas fa-globe"></i> website.com</p>
+        <section>
+          <div class="slashpresent-kicker">Closing principle</div>
+          <div class="slashpresent-shell paper">
+            <h2>Make the default output feel authored</h2>
+            <p class="slashpresent-lead">
+              The biggest improvement is not a bigger stack. It is a stronger
+              visual point of view and a more complete component language inside
+              the repo agents already use.
+            </p>
+            <div class="slashpresent-proof-band" style="margin-top: 1rem;">
+              <span class="slashpresent-proof"><strong>Immediate</strong> better theme and components</span>
+              <span class="slashpresent-proof"><strong>Near-term</strong> richer templates and export fidelity</span>
+              <span class="slashpresent-proof"><strong>Outcome</strong> decks that feel deliberate, not generated</span>
+            </div>
           </div>
         </section>
       </div>
     </div>
 
-    <!-- Navigation Controls -->
-    <div class="nav-controls">
-      <button class="nav-btn" onclick="Reveal.slide(Reveal.getIndices().h - 1)">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <div class="dots" id="dots"></div>
-      <button class="nav-btn" onclick="Reveal.slide(Reveal.getIndices().h + 1)">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-      <span class="slide-counter">
-        <span id="currentSlide">1</span> / <span id="totalSlides">X</span>
-      </span>
-    </div>
+    <script type="module">
+      import Reveal from "./dist/reveal.esm.js";
+      import RevealMarkdown from "./plugin/markdown/markdown.esm.js";
+      import RevealHighlight from "./plugin/highlight/highlight.esm.js";
+      import RevealNotes from "./plugin/notes/notes.esm.js";
+      import RevealMath from "./plugin/math/math.esm.js";
+      import RevealSearch from "./plugin/search/search.esm.js";
+      import RevealZoom from "./plugin/zoom/zoom.esm.js";
 
-    <!-- Load Reveal.js -->
-    <script src="dist/reveal.js"></script>
+      window.Reveal = Reveal;
 
-    <!-- Load Plugins -->
-    <script src="plugin/markdown/markdown.js"></script>
-    <script src="plugin/highlight/highlight.js"></script>
-    <script src="plugin/notes/notes.js"></script>
-    <script src="plugin/math/math.js"></script>
-    <script src="plugin/search/search.js"></script>
-    <script src="plugin/zoom/zoom.js"></script>
-
-    <script>
       Reveal.initialize({
         hash: true,
         controls: true,
         progress: true,
         center: true,
         transition: "slide",
-
         pdfSeparateFragments: false,
         pdfMaxPagesPerSlide: 1,
-
-        chart: {
-          defaults: {
-            color: "lightgray",
-            scale: {
-              beginAtZero: true,
-              ticks: { stepSize: 1 },
-              grid: { color: "rgba(0,0,0,0.1)" },
-            },
-          },
-          line: {
-            borderColor: ["#635BFF"],
-            borderDash: [
-              [5, 10],
-              [0, 0],
-            ],
-          },
-          bar: { backgroundColor: ["#635BFF"] },
-          pie: {
-            backgroundColor: [
-              ["#635BFF", "#4F46E5", "#4338CA", "#6366F1", "#818CF8"],
-            ],
-          },
-        },
-
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -278,16 +366,8 @@ function example() {
           RevealMath,
           RevealSearch,
           RevealZoom,
-          RevealChart,
         ],
-      });
-
-      // Update slide counter
-      const totalSlides = document.querySelectorAll(".slides > section").length;
-      document.getElementById("totalSlides").textContent = totalSlides;
-
-      Reveal.on("slidechanged", function (event) {
-        document.getElementById("currentSlide").textContent = event.indexh + 1;
+        maxScale: 1,
       });
     </script>
   </body>

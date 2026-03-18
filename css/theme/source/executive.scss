@@ -1,0 +1,87 @@
+/**
+ * Executive theme for Slashpresent
+ * Boardroom and finance-forward variant.
+ */
+
+@import "../template/mixins";
+@import "../template/settings";
+@import "./slashpresent-system";
+
+$execBackground: #0d1824;
+$execSurface: #152131;
+$execSurfaceStrong: #1d2b3b;
+$execPaper: #ece4d4;
+$execPaperSoft: #d3c8b5;
+$execForeground: #f8f3ea;
+$execMuted: #9daad0;
+$execBorder: rgba(248, 243, 234, 0.11);
+$execAccent: #b68c49;
+$execAccentSoft: #dcc185;
+$execSecondary: #8aa7c6;
+$execShadow: rgba(4, 8, 15, 0.34);
+$execPaperBackground: #f4efe5;
+$execPaperForeground: #182333;
+
+$backgroundColor: $execBackground;
+$mainColor: $execForeground;
+$headingColor: $execForeground;
+
+$mainFontSize: 37px;
+$mainFont: 'Open Runde Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$headingFont: 'Fraunces', Georgia, serif;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.03em;
+$headingTextTransform: none;
+$headingFontWeight: 700;
+$linkColor: $execAccentSoft;
+$linkColorHover: $execAccent;
+$selectionBackgroundColor: rgba($execAccent, 0.24);
+
+$heading1Size: 2.95em;
+$heading2Size: 2.05em;
+$heading3Size: 1.48em;
+$heading4Size: 1.1em;
+
+$codeFont: 'IBM Plex Mono', 'Menlo', 'Consolas', monospace;
+
+@mixin bodyBackground() {
+  background: radial-gradient(circle at top left, rgba(138, 167, 198, 0.12), transparent 28%), $execBackground;
+}
+
+@include slashpresent-theme(
+  $execBackground,
+  $execSurface,
+  $execSurfaceStrong,
+  $execPaper,
+  $execPaperSoft,
+  $execForeground,
+  $execMuted,
+  $execBorder,
+  $execAccent,
+  $execAccentSoft,
+  $execSecondary,
+  $execShadow,
+  $execPaperBackground,
+  $execPaperForeground,
+  dark
+);
+
+.reveal {
+  .slashpresent-shell,
+  .slashpresent-quote,
+  .slashpresent-comparison,
+  .slashpresent-swatch {
+    border-radius: 1.05rem;
+  }
+
+  .slashpresent-step-body {
+    border-left-color: rgba($execAccentSoft, 0.28);
+  }
+
+  .slashpresent-chip,
+  .slashpresent-proof {
+    background: rgba($execForeground, 0.035);
+  }
+}
+
+@import "../template/theme";

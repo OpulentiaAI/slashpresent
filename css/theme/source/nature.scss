@@ -1,0 +1,84 @@
+/**
+ * Nature theme for Slashpresent
+ * Grounded green-and-stone variant for sustainability and systems work.
+ */
+
+@import "../template/mixins";
+@import "../template/settings";
+@import "./slashpresent-system";
+
+$natureBackground: #16201c;
+$natureSurface: #1d2c27;
+$natureSurfaceStrong: #243731;
+$naturePaper: #ece7da;
+$naturePaperSoft: #d2ccbf;
+$natureForeground: #f6f2e8;
+$natureMuted: #98a89b;
+$natureBorder: rgba(246, 242, 232, 0.11);
+$natureAccent: #7d9364;
+$natureAccentSoft: #b4c58d;
+$natureSecondary: #c08a6d;
+$natureShadow: rgba(7, 11, 9, 0.32);
+$naturePaperBackground: #eff0e6;
+$naturePaperForeground: #1a241f;
+
+$backgroundColor: $natureBackground;
+$mainColor: $natureForeground;
+$headingColor: $natureForeground;
+
+$mainFontSize: 37px;
+$mainFont: 'Open Runde Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$headingFont: 'Fraunces', Georgia, serif;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.03em;
+$headingTextTransform: none;
+$headingFontWeight: 700;
+$linkColor: $natureAccentSoft;
+$linkColorHover: $natureAccent;
+$selectionBackgroundColor: rgba($natureAccent, 0.24);
+
+$heading1Size: 2.95em;
+$heading2Size: 2.05em;
+$heading3Size: 1.48em;
+$heading4Size: 1.1em;
+
+$codeFont: 'IBM Plex Mono', 'Menlo', 'Consolas', monospace;
+
+@mixin bodyBackground() {
+  background:
+    radial-gradient(circle at top left, rgba(180, 197, 141, 0.08), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(192, 138, 109, 0.08), transparent 22%),
+    $natureBackground;
+}
+
+@include slashpresent-theme(
+  $natureBackground,
+  $natureSurface,
+  $natureSurfaceStrong,
+  $naturePaper,
+  $naturePaperSoft,
+  $natureForeground,
+  $natureMuted,
+  $natureBorder,
+  $natureAccent,
+  $natureAccentSoft,
+  $natureSecondary,
+  $natureShadow,
+  $naturePaperBackground,
+  $naturePaperForeground,
+  dark
+);
+
+.reveal {
+  .slashpresent-proof strong,
+  .slashpresent-chip strong {
+    color: $natureAccentSoft;
+  }
+
+  .slashpresent-quote,
+  .slashpresent-quadrant {
+    background: rgba($naturePaper, 0.05);
+  }
+}
+
+@import "../template/theme";

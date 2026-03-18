@@ -1,0 +1,98 @@
+/**
+ * Minimal theme for Slashpresent
+ * Quiet paper-led variant for research and technical decks.
+ */
+
+@import "../template/mixins";
+@import "../template/settings";
+@import "./slashpresent-system";
+
+$minimalBackground: #f3efe7;
+$minimalSurface: #fbf8f2;
+$minimalSurfaceStrong: #f7f3eb;
+$minimalPaper: #302922;
+$minimalPaperSoft: #60584e;
+$minimalForeground: #181512;
+$minimalMuted: #7a7368;
+$minimalBorder: rgba(24, 21, 18, 0.08);
+$minimalAccent: #9e5b2a;
+$minimalAccentSoft: #bc7642;
+$minimalSecondary: #587168;
+$minimalShadow: rgba(50, 41, 34, 0.14);
+$minimalPaperBackground: #1f1b18;
+$minimalPaperForeground: #f6f1e8;
+
+$backgroundColor: $minimalBackground;
+$mainColor: $minimalForeground;
+$headingColor: $minimalForeground;
+
+$mainFontSize: 36px;
+$mainFont: 'Open Runde Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$headingFont: 'Open Runde Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.045em;
+$headingTextTransform: none;
+$headingFontWeight: 700;
+$linkColor: $minimalAccent;
+$linkColorHover: $minimalAccentSoft;
+$selectionBackgroundColor: rgba($minimalAccent, 0.18);
+
+$heading1Size: 2.9em;
+$heading2Size: 1.95em;
+$heading3Size: 1.36em;
+$heading4Size: 1.02em;
+
+$codeFont: 'IBM Plex Mono', 'Menlo', 'Consolas', monospace;
+
+@mixin bodyBackground() {
+  background:
+    radial-gradient(circle at top right, rgba(188, 118, 66, 0.08), transparent 24%),
+    $minimalBackground;
+}
+
+@include slashpresent-theme(
+  $minimalBackground,
+  $minimalSurface,
+  $minimalSurfaceStrong,
+  $minimalPaper,
+  $minimalPaperSoft,
+  $minimalForeground,
+  $minimalMuted,
+  $minimalBorder,
+  $minimalAccent,
+  $minimalAccentSoft,
+  $minimalSecondary,
+  $minimalShadow,
+  $minimalPaperBackground,
+  $minimalPaperForeground,
+  light
+);
+
+.reveal {
+  &:before {
+    background-image:
+      linear-gradient(rgba(24, 21, 18, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(24, 21, 18, 0.04) 1px, transparent 1px);
+    opacity: 0.18;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 0.9;
+  }
+
+  .slashpresent-shell {
+    box-shadow: 0 22px 48px -40px $minimalShadow;
+  }
+
+  .slashpresent-card,
+  .slashpresent-stat-card,
+  .slashpresent-quadrant,
+  .slashpresent-quote {
+    background: rgba($minimalForeground, 0.02);
+  }
+}
+
+@import "../template/theme";

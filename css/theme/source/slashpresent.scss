@@ -1,0 +1,67 @@
+/**
+ * Slashpresent theme for reveal.js
+ * Premium editorial system for agentic presentation development.
+ */
+
+@import "../template/mixins";
+@import "../template/settings";
+@import "./slashpresent-system";
+
+$slashBackground: #121517;
+$slashSurface: #1a1f23;
+$slashSurfaceStrong: #212830;
+$slashPaper: #efe7d8;
+$slashPaperSoft: #d4cabb;
+$slashForeground: #f6f1e7;
+$slashMuted: #a7aea8;
+$slashBorder: rgba(246, 241, 231, 0.12);
+$slashAccent: #d78349;
+$slashAccentSoft: #f0b27e;
+$slashSecondary: #7fb3a4;
+$slashShadow: rgba(0, 0, 0, 0.28);
+
+$backgroundColor: $slashBackground;
+$mainColor: $slashForeground;
+$headingColor: $slashForeground;
+
+$mainFontSize: 37px;
+$mainFont: 'Open Runde Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$headingFont: 'Fraunces', Georgia, serif;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.025em;
+$headingTextTransform: none;
+$headingFontWeight: 700;
+$linkColor: $slashAccentSoft;
+$linkColorHover: $slashAccent;
+$selectionBackgroundColor: rgba($slashAccent, 0.24);
+
+$heading1Size: 2.95em;
+$heading2Size: 2.05em;
+$heading3Size: 1.48em;
+$heading4Size: 1.1em;
+
+$codeFont: 'IBM Plex Mono', 'Menlo', 'Consolas', monospace;
+
+@mixin bodyBackground() {
+  background: $slashBackground;
+}
+
+@include slashpresent-theme(
+  $slashBackground,
+  $slashSurface,
+  $slashSurfaceStrong,
+  $slashPaper,
+  $slashPaperSoft,
+  $slashForeground,
+  $slashMuted,
+  $slashBorder,
+  $slashAccent,
+  $slashAccentSoft,
+  $slashSecondary,
+  $slashShadow,
+  $slashPaper,
+  $slashBackground,
+  dark
+);
+
+@import "../template/theme";
