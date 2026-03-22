@@ -14,10 +14,7 @@
     >
     <meta name="author" content="Opulentia AI">
 
-    <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="/dist/reveal.css">
-    <link rel="stylesheet" href="/dist/theme/slashpresent.css" id="theme">
-    <link rel="stylesheet" href="/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="./reset.css">
 
     <script>
       const link = document.createElement("link");
@@ -28,6 +25,8 @@
         : "/css/print/paper.css";
       document.head.appendChild(link);
     </script>
+    <script type="module" crossorigin src="./assets/main-DGL3u8iu.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-e7bwjo6b.css">
   </head>
   <body>
     <div class="reveal">
@@ -340,35 +339,5 @@
       </div>
     </div>
 
-    <script type="module">
-      import Reveal from "/dist/reveal.esm.js";
-      import RevealMarkdown from "/plugin/markdown/markdown.esm.js";
-      import RevealHighlight from "/plugin/highlight/highlight.esm.js";
-      import RevealNotes from "/plugin/notes/notes.esm.js";
-      import RevealMath from "/plugin/math/math.esm.js";
-      import RevealSearch from "/plugin/search/search.esm.js";
-      import RevealZoom from "/plugin/zoom/zoom.esm.js";
-
-      window.Reveal = Reveal;
-
-      Reveal.initialize({
-        hash: true,
-        controls: true,
-        progress: true,
-        center: true,
-        transition: "slide",
-        pdfSeparateFragments: false,
-        pdfMaxPagesPerSlide: 1,
-        plugins: [
-          RevealMarkdown,
-          RevealHighlight,
-          RevealNotes,
-          RevealMath,
-          RevealSearch,
-          RevealZoom,
-        ],
-        maxScale: 1,
-      });
-    </script>
   </body>
 </html>
