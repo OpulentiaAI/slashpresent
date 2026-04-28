@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "generatedAt": "template-seed",
+  "presentationName": "slashpresent-template",
+  "title": "Slashpresent Template",
+  "description": "Initial slide manifest placeholder for the snapshot-seeded slashpresent workspace.",
+  "entrypointPath": "/workspace/slashpresent/index.html",
+  "slideBlueprintPath": "/workspace/slashpresent/docs/slide-blueprints.md",
+  "slides": []
+}

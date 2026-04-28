@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "generatedAt": "template-seed",
+  "presentation_name": "slashpresent-template",
+  "title": "Slashpresent Template",
+  "description": "Initial slide-order and editorial blueprint metadata for the snapshot-seeded slashpresent workspace.",
+  "entrypoint_path": "/workspace/slashpresent/index.html",
+  "design_path": "/workspace/slashpresent/DESIGN.md",
+  "brief_path": "/workspace/slashpresent/BRIEF.md",
+  "slide_blueprint_path": "/workspace/slashpresent/docs/slide-blueprints.md",
+  "reference_summary_path": "/workspace/slashpresent/.opulentia/reference-deck-summary.md",
+  "slide_manifest_path": "/workspace/slashpresent/.opulentia/slide-manifest.json",
+  "workspace_mode": "template-first",
+  "slides": [
+    { "slide_number": 1, "title": "Cover", "layout": "cover", "filename": "/workspace/slashpresent/index.html", "status": "pending" },
+    { "slide_number": 2, "title": "Context", "layout": "intro_context", "filename": "/workspace/slashpresent/index.html", "status": "pending" },
+    { "slide_number": 3, "title": "Core Capabilities", "layout": "content_with_stats", "filename": "/workspace/slashpresent/index.html", "status": "pending" },
+    { "slide_number": 4, "title": "Deep Dive 1", "layout": "pillar_grid", "filename": "/workspace/slashpresent/index.html", "status": "pending" },
+    { "slide_number": 5, "title": "Deep Dive 2", "layout": "comparison_or_timeline", "filename": "/workspace/slashpresent/index.html", "status": "pending" },
+    { "slide_number": 6, "title": "Deep Dive 3", "layout": "diagram_or_matrix", "filename": "/workspace/slashpresent/index.html", "status": "pending" },
+    { "slide_number": 7, "title": "Deep Dive 4", "layout": "proof_band", "filename": "/workspace/slashpresent/index.html", "status": "pending" },
+    { "slide_number": 8, "title": "Architecture", "layout": "architecture", "filename": "/workspace/slashpresent/index.html", "status": "pending" },
+    { "slide_number": 9, "title": "Flow / Synergy", "layout": "flow", "filename": "/workspace/slashpresent/index.html", "status": "pending" },
+    { "slide_number": 10, "title": "Audience / Markets", "layout": "markets", "filename": "/workspace/slashpresent/index.html", "status": "pending" },
+    { "slide_number": 11, "title": "Proof", "layout": "proof_points", "filename": "/workspace/slashpresent/index.html", "status": "pending" },
+    { "slide_number": 12, "title": "Decision / CTA", "layout": "summary_cta", "filename": "/workspace/slashpresent/index.html", "status": "pending" }
+  ]
+}

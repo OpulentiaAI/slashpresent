@@ -2,6 +2,8 @@
 
 This is a [reveal.js](https://revealjs.com) presentation template for Slashpresent, with a premium editorial default theme and reusable business-slide components.
 
+Slashpresent is designed around one canonical authored deck file: `index.html`. The surrounding sidecars (`DESIGN.md`, `BRIEF.md`, `docs/slide-blueprints.md`, `context/`, `archive/`, `.opulentia/presentation-seed.json`, `.opulentia/slide-manifest.json`) exist to strengthen authoring discipline and validation without replacing that source of truth.
+
 ## Getting Started
 
 First, install dependencies and build the project:
@@ -18,6 +20,26 @@ bun run dev
 ```
 
 This will start a development server at http://localhost:8000 with instant updates as you edit your slides.
+
+Before final preview/build, prefer:
+
+```bash
+node scripts/validate-deck.mjs index.html
+```
+
+For markdown narrative export:
+
+```bash
+node scripts/export-deck-md.mjs
+```
+
+For screenshot + PDF export, prefer:
+
+```bash
+node scripts/export-deck.mjs
+```
+
+The screenshot exporter depends on optional packages such as `puppeteer` and `pdf-lib`. If those are not installed, the script will tell you what is missing.
 
 ## Project Configuration
 
@@ -98,6 +120,17 @@ This project uses:
 The Open Runde Sans font family is self-hosted in `/public/fonts/openrunde/` with Regular, Medium, Semibold, and Bold weights. Other fonts are loaded from Google Fonts CDN.
 
 ## Creating Slides
+
+## Authoring Sidecars
+
+- `DESIGN.md` - visual source of truth for typography, color, motion, and composition
+- `BRIEF.md` - deck objective, audience, narrative mode, proof obligations, and open risks
+- `docs/slide-blueprints.md` - per-slide editorial sequence, required elements, and composition guidance
+- `context/` - source intake for research, notes, screenshots, and supporting data
+- `archive/` - retired drafts and superseded material
+- `docs/components.md` - copy-paste slashpresent component cookbook
+- `.opulentia/presentation-seed.json` - working slide-order and slide-role metadata for viewer/publish alignment
+- `.opulentia/slide-manifest.json` - sidecar slide map used for validation/publish reconciliation
 
 ### Basic Structure
 
@@ -233,12 +266,18 @@ Place your custom images, videos, and other media files in `public/images/` and 
 
 ## PDF Export Guide for Scout Presentations
 
-[Reveal.js guide](https://revealjs.com/pdf-export/)
+Prefer the screenshot export pipeline first:
+
+```bash
+node scripts/export-deck.mjs
+```
+
+This renders each slide as a screenshot and composes a PDF, which is more reliable for layered CSS, overflow handling, and browser-specific print quirks.
+
+Fallback option: use the standard Reveal print flow only when screenshot export is unavailable.
 
 1. Open your presentation in a browser
 2. Add `?print-pdf` to the URL
    - Example: `http://localhost:8000/?print-pdf`
 3. Press **Cmd+P** (Mac) or **Ctrl+P** (Windows/Linux)
 4. Save as PDF
-
-Note: For best results, use Chrome or Chromium-based browsers for PDF export.

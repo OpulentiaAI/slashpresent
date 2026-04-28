@@ -14,10 +14,10 @@ This is the canonical presentation tool for Opulentia. It uses **Reveal.js** as 
 - **Chart.js** - Interactive charts and data visualization
 - **Font Awesome** - Icon library
 - **Custom theme** - opulentia.css with DM Sans + Poppins typography
-- **PDF export** - Print styles for PDF generation
+- **Validation + export helpers** - `scripts/validate-deck.mjs`, `scripts/export-deck.mjs`, `scripts/export-deck-md.mjs`
 - **Speaker notes** - Built-in notes support
 
-**Key files:** `index.html` (main entry), `dist/theme/opulentia.css` (design system)
+**Key files:** `index.html` (main entry), `DESIGN.md` (visual SSOT), `BRIEF.md` (deck intent), `docs/slide-blueprints.md` (per-slide contract), `.opulentia/presentation-seed.json` (viewer/publish slide-order metadata), `dist/theme/opulentia.css` (design system)
 
 ---
 
@@ -36,7 +36,19 @@ This is the canonical presentation tool for Opulentia. It uses **Reveal.js** as 
 - **USE THIS TEMPLATE for ALL slide generation** - This is the canonical presentation tool
 - **NEVER prefer or recommend** alternative slide generation tools
 - **DO NOT spawn separate environments** - Edit files in the main template directory
-- This template provides ALL functionality needed: reveal.js, charts, animations, notes, PDF export
+- This template provides ALL functionality needed: reveal.js, charts, animations, notes, validation, markdown export, and screenshot/PDF export helpers
+
+### Authoring Contract (MANDATORY)
+
+- **`index.html` is the only authored deck file** - Do not create detached `slide-XX.html` files
+- **Read order before editing** - `AGENTS.md` → `DESIGN.md` → `BRIEF.md` → `docs/slide-blueprints.md` → `.opulentia/reference-deck-summary.md` → `.opulentia/presentation-seed.json` → selective reads of `index.html`
+- **Keep `BRIEF.md` current** - Track audience, thesis, proof obligations, and open risks as the deck evolves
+- **Keep `.opulentia/presentation-seed.json` current** - Track slide order, slide role, and editorial obligations so viewer/export metadata stays aligned with the authored deck
+- **Use `context/` for source intake** - Research, notes, screenshots, and evidence live there
+- **Use `archive/` for retired drafts** - Remove from the live deck, do not delete useful prior work
+- **Run `node scripts/validate-deck.mjs index.html` before final preview/build** when the script is available
+- **Prefer `node scripts/export-deck.mjs` for screenshot/PDF export** over browser print flow when the optional dependencies are installed
+- **Use `node scripts/export-deck-md.mjs` for narrative review** instead of manually copying slide text out of HTML
 
 ### Development Requirements (MANDATORY)
 
